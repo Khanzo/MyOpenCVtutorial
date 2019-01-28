@@ -8,11 +8,11 @@ Dlib detector:
 OpenCV:
 pip install opencv_python-3.4.5+contrib-cp36-cp36m-win_amd64.whl (https://www.lfd.uci.edu/~gohlke/pythonlibs/#opencv)
 
-images_example.py - операции с изображениями
-mouse_event.py - события мыши
-webcam.py - работа с веб-камерой
-facedetect.py - работа с детектом лица, глаз, рта
-facepoints.py - детект-точек лица
+- images_example.py - операции с изображениями
+- mouse_event.py - события мыши
+- webcam.py - работа с веб-камерой
+- facedetect.py - работа с детектом лица, глаз, рта
+- facepoints.py - детект-точек лица
 
 -----------------
 Both SIFT and SURF authors require license fees for usage of their original algorithms.
