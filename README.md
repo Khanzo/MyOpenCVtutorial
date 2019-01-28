@@ -45,4 +45,3 @@ LDB
 Note that if you assign orientation to the interest point and rotate the image patch accordingly, you get rotational invariance for free. Even Harris corners are rotationally invariant and the descriptor may be made so as well.
 
 Some more complete solution is done in Hugin, because they also struggled to have a patent-free interest point detector.
------------------
