@@ -65,6 +65,7 @@ BLACK_COLOR = (0, 0, 0)
 (mStart, mEnd) = face_utils.FACIAL_LANDMARKS_IDXS["mouth"]
 
 camera = cv2.VideoCapture(0)
+
 while True:
     # Grab the current paintWindow
     (grabbed, frame) = camera.read()
@@ -80,7 +81,7 @@ while True:
         cv2.imshow("Frame", frame)
         key = cv2.waitKey(1) & 0xFF
         continue
-    
+
     shape = predictor(gray, rect)
     shape = face_utils.shape_to_np(shape)
 
@@ -88,7 +89,7 @@ while True:
     leftEye = shape[lStart:lEnd]
     rightEye = shape[rStart:rEnd]
     nose = shape[nStart:nEnd]
-    
+
     temp = leftEye
     leftEye = rightEye
     rightEye = temp
@@ -113,7 +114,7 @@ while True:
 
     for (x, y) in np.concatenate((mouth, leftEye, rightEye), axis=0):
         cv2.circle(frame, (x, y), 2, GREEN_COLOR, -1)
-    
+
     cv2.imshow("Frame", frame)
     if cv2.waitKey(1) & 0xFF == ord("q"):
         break
